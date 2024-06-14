@@ -13,7 +13,7 @@ assist in creating prompt texts.
 ### git clone
 
 1. `cd` to the `custom_nodes` directory of your ComfyUI installation
-2. `git clone https://github.com/Xyem/Raccoon-Oobabooga.git`
+2. `git clone https://github.com/onexzero/Raccoon-Oobabooga.git`
 3. Re/start ComfyUI
 
 ### git submodule
@@ -23,7 +23,7 @@ submodules for custom nodes. This is the node author's preference of
 installation/management.
 
 1. `cd` to the `custom_nodes` directory of your ComfyUI installation
-2. `git submodule add -f https://github.com/Xyem/Raccoon-Oobabooga.git Raccoon_oobabooga`
+2. `git submodule add -f https://github.com/onexzero/Raccoon-Oobabooga.git Raccoon_oobabooga`
 3. `git add ../.gitmodules`
 4. `git add Raccoon_oobabooga`
 5. `git commit -m "Add Raccoon Oobabooga custom nodes"`
