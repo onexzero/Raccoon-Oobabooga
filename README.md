@@ -1,4 +1,4 @@
-# Raccoon Oobabooga
+# Raccoon Oobabooga - I made it by referring to xycuno_oobabooga.
 
 > :warning: These custom nodes are under initial development and may be
 > substantially changed between updates.
