@@ -1,4 +1,4 @@
-# Raccoon Oobabooga - I made it by referring to xycuno_oobabooga.
+# Raccoon Oobabooga - I made it by referring to xycuno_oobabooga.(https://github.com/Xyem/Xycuno-Oobabooga.git)
 
 > :warning: These custom nodes are under initial development and may be
 > substantially changed between updates.
