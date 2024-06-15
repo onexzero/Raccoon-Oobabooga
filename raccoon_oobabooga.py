@@ -20,6 +20,7 @@ class RaccoonOobabooga:
         "max_tokens":  ("INT",   {"default": 200, "min": 0, "max": 0xffffffffffffffff}),
         "temperature": ("FLOAT", {"default": 1.0, "min": 0, "max": 0xffffffffffffffff}),
         "top_p":       ("FLOAT", {"default": 0.9, "min": 0, "max": 0xffffffffffffffff}),        
+        "use_cache":   ("BOOLEAN",   {"default": True}),
       }
     }
 
@@ -28,7 +29,14 @@ class RaccoonOobabooga:
   FUNCTION = "oobabooga"
   CATEGORY = "Raccoon/Oobabooga"
 
-  def oobabooga(self, host, prompt, character,seed, max_tokens, temperature, top_p):
+  def oobabooga(self, host, prompt, character,use_cache,seed, max_tokens, temperature, top_p):
+
+    if use_cache:
+      old_prompt=""
+      with open('RaccoonOobabooga.txt', 'r') as file:
+        old_prompt = file.read()
+      return (old_prompt,)
+
     url = "/v1/chat/completions"
     url = host + url
 
@@ -55,4 +63,8 @@ class RaccoonOobabooga:
     response.raise_for_status()  # Raise exception for non-2xx responses
     answer = response.json()["choices"][0]["message"]["content"]    
     print("LLM RESP:",answer)
+    if answer != None and answer != "":
+      with open('RaccoonOobabooga.txt', 'w') as file:
+        file.write(answer)
+
     return (answer,)
