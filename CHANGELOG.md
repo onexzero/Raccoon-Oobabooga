@@ -12,3 +12,8 @@ Initial release.
 ### Added
 
 - Oobabooga Node
+
+2024-06-16
+
+-Added prompt caching ability
+-Added LLM call switch
