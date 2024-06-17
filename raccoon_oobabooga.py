@@ -33,7 +33,7 @@ class RaccoonOobabooga:
 
     if use_cache:
       old_prompt=""
-      with open('RaccoonOobabooga.txt', 'r') as file:
+      with open('RaccoonOobabooga.txt', 'r',encoding='utf-8') as file:
         old_prompt = file.read()
       return (old_prompt,)
 
@@ -64,7 +64,7 @@ class RaccoonOobabooga:
     answer = response.json()["choices"][0]["message"]["content"]    
     print("LLM RESP:",answer)
     if answer != None and answer != "":
-      with open('RaccoonOobabooga.txt', 'w') as file:
+      with open('RaccoonOobabooga.txt', 'w',encoding='utf-8') as file:
         file.write(answer)
 
     return (answer,)
